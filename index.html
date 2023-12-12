@@ -13,7 +13,7 @@
             margin: 0;
         }
 
-        #result{
+        #result {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -47,11 +47,49 @@
             position: relative;
             bottom: -15px;
         }
+        #btn {
+            background-color: #fff000;
+            border-radius: 12px;
+            color: #000;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 15px;
+            text-align: center;
+            transition: 200ms;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            border: solid 2px black;
+        }
+
+        #btn:not(:disabled):hover,
+        #btn:not(:disabled):focus {
+            outline: 0;
+            background: #f4e603;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, .2), 0 3px 8px 0 rgba(0, 0, 0, .15);
+        }
+
+        #btn:disabled {
+            filter: saturate(0.2) opacity(0.5);
+            -webkit-filter: saturate(0.2) opacity(0.5);
+            cursor: not-allowed;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 1000px;
+        }
     </style>
 </head>
 <body>
 
-<div id="result"></div>
+
+<div id="result">
+    <button id="btn">Remove Comment</button>
+</div>
 
 </body>
 </html>

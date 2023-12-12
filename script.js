@@ -1,5 +1,3 @@
-
-
 let comments = [
     {
         name: "Miroslav Novotný",
@@ -13,7 +11,7 @@ let comments = [
     },
     {
         name: "Vito Kraus",
-        date:new Date('2020-12-12T16:34:56Z'),
+        date: new Date('2020-12-12T16:34:56Z'),
         text: "I love eating monkey ass"
     }
 ]
@@ -33,6 +31,9 @@ for (const comment of comments) {
     text.innerText = comment.text;
     let div2 = document.createElement("div");
     div2.className = "commentInfo";
+    let img = document.createElement("img");
+    img.src = "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg";
+    div2.appendChild(img);
     div2.appendChild(jmeno);
     div2.appendChild(datum);
     div.appendChild(div2);
@@ -40,7 +41,13 @@ for (const comment of comments) {
     resultDiv.appendChild(div);
 }
 
-function addComments(){
+let btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+    let comments = document.querySelectorAll(".comment");
+    comments[0].remove();
+});
+
+function addComments() {
     comments.push(
         {
             name: "Olivia Thompson",
@@ -116,6 +123,5 @@ function addComments(){
             name: "Leo Martinez",
             date: new Date('2023-11-15T09:40:15Z'),
             text: "Creating moments that become memories."
-        }
-    );
+        });
 }
