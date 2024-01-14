@@ -7,12 +7,12 @@ let comments = [
     {
         name: "Filip Másilko",
         date: new Date('2023-01-02T12:34:56Z'),
-        text: "I love my sister very much and her name is Filip"
+        text: "Random comment"
     },
     {
         name: "Vito Kraus",
         date: new Date('2020-12-12T16:34:56Z'),
-        text: "I love eating monkey ass"
+        text: "I like to study IT"
     }
 ]
 
